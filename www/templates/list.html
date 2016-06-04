@@ -1,0 +1,18 @@
+<ion-view title="ToDo App" class="bar-positive">
+     <ion-nav-buttons side="secondary">
+          <button class="button icon ion-plus" ui-sref="new"></button>
+     </ion-nav-buttons>
+
+     <ion-content class="has-header padding">
+          <ion-list can-swipe="true">
+               <ion-item ng-repeat="item in items" ng-class="item.done == 1 ? 'todo-done' : ''">                    
+                    <h2>{{ item.title }}</h2>
+                    <p>{{ item.description }}</p>
+
+                    <ion-option-button class="ion-checkmark button-balanced" ng-click="done($index, item.id)"></ion-option-button>
+                    <ion-option-button class="ion-edit button-positive" ui-sref="edit({ id: item.id})"></ion-option-button>
+                    <ion-option-button class="ion-trash-a button-assertive" ng-click="delete($index, item.id)"></ion-option-button>
+               </ion-item>
+          </ion-list>
+     </ion-content>
+</ion-view>
