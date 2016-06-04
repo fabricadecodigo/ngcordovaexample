@@ -1,2 +1,2 @@
 # ngCordova Example
-Exemplo de um aplicativo utilizando os plugins SQLite, Toas, Local notification e Badge
+Exemplo de um aplicativo utilizando os plugins SQLite, Toast, Local notification e Badge
