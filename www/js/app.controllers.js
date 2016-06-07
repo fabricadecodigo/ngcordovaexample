@@ -1,10 +1,3 @@
-//http://ngcordova.com/docs/install/
-//http://ngcordova.com/docs/plugins/sqlite/
-//http://ngcordova.com/docs/plugins/toast/
-//http://ngcordova.com/docs/plugins/localNotification/
-//http://ngcordova.com/docs/plugins/badge/
-
-
 app.controller('ToDoListController', function ($scope, $ionicPlatform, $ionicListDelegate, $cordovaToast, $cordovaBadge, ToDoFactory) {
      //utilizando a função $ionicPlatform.ready para verificar se o dispositivo (celular, tablet, ...)
      //foi carregado completamente.
@@ -96,7 +89,7 @@ app.controller('ToDoEditController', function ($scope, $state, $stateParams, $io
                                         id: result.id,
                                         title: 'Tarefa salva com sucesso.',
                                         text: 'Você tem uma tarefa para ser executada. Mãos a obra! =]'
-                                   })
+                                   });
                                    
                                    //setando o badge para o total de tarefas não concluídas
                                    ToDoFactory.countNotDone().then(function (count) { $cordovaBadge.set(count); });
